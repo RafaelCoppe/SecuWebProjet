@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Démo Injection NoSQL</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #333; text-align: center; }
+        h2 { color: #e74c3c; border-bottom: 2px solid #e74c3c; padding-bottom: 10px; }
+        .warning { 
+            background-color: #fff3cd; 
+            color: #856404; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 20px 0;
+            border-left: 4px solid #ffc107;
+        }
+        .info { 
+            background-color: #d1ecf1; 
+            color: #0c5460; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 20px 0;
+            border-left: 4px solid #17a2b8;
+        }
+        .credentials {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 10px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover { background-color: #0056b3; }
+        .btn-danger { background-color: #dc3545; }
+        .btn-danger:hover { background-color: #c82333; }
+        code {
+            background-color: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚨 Démonstration d'Injection NoSQL</h1>
+        
+        <div class="warning">
+            <strong>⚠️ ATTENTION:</strong> Ce site contient volontairement des vulnérabilités de sécurité à des fins éducatives uniquement.
+        </div>
+
+        <h2>📋 Objectif du Projet</h2>
+        <p>Ce projet démontre les vulnérabilités d'injection NoSQL dans une application web et présente les techniques de remédiation appropriées.</p>
+
+        <h2>👥 Comptes de Test</h2>
+        <div class="credentials">
+            <h3>Administrateur:</h3>
+            <p><strong>Username:</strong> admin<br>
+            <strong>Password:</strong> admin123</p>
+            
+            <h3>Utilisateurs:</h3>
+            <p><strong>Username:</strong> user1 | <strong>Password:</strong> password123<br>
+            <strong>Username:</strong> user2 | <strong>Password:</strong> secret456</p>
+        </div>
+
+        <h2>🎯 Tests Disponibles</h2>
+        <p>Cliquez sur le bouton ci-dessous pour accéder aux pages de test et d'exploitation:</p>
+        
+        <div style="text-align: center;">
+            <a href="/exploit" class="btn btn-danger">🔓 Page d'Exploitation</a>
+        </div>
+
+        <h2>📚 Types de Vulnérabilités</h2>
+        <div class="info">
+            <h3>1. Injection NoSQL dans l'authentification</h3>
+            <p>Bypass d'authentification en manipulant les requêtes MongoDB</p>
+            
+            <h3>2. Injection NoSQL dans la recherche</h3>
+            <p>Exécution de requêtes arbitraires via les paramètres de recherche</p>
+        </div>
+
+        <h2>🛡️ Techniques de Remédiation</h2>
+        <ul>
+            <li><strong>Validation des types:</strong> Vérifier que les paramètres sont du bon type</li>
+            <li><strong>Sanitisation:</strong> Nettoyer les caractères spéciaux MongoDB</li>
+            <li><strong>Hachage des mots de passe:</strong> Utilisation de bcrypt</li>
+            <li><strong>Requêtes paramétrées:</strong> Éviter la construction dynamique de requêtes</li>
+            <li><strong>Limitation des champs:</strong> Sélection explicite des champs retournés</li>
+        </ul>
+
+        <h2>🚀 Instructions de Démarrage</h2>
+        <div class="info">
+            <p><strong>Avec Docker:</strong></p>
+            <code>docker-compose up --build</code>
+            
+            <p style="margin-top: 15px;"><strong>Accès:</strong></p>
+            <p>Application: <a href="http://localhost:3000">http://localhost:3000</a><br>
+            MongoDB: localhost:27017</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "nosql-injection-demo",
+  "version": "1.0.0",
+  "description": "Démonstration de vulnérabilités NoSQL et leur remédiation",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3",
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "author": "Demo",
+  "license": "MIT"
+}
